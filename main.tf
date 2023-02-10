@@ -41,19 +41,6 @@ resource "aws_security_group" "instance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-variable "server_port" {
-  description = "The port the server will use for HTTP requests"
-  type        = number
-  default     = 8080
-}
-
-variable "security_group_name" {
-  description = "The name of the security group"
-  type        = string
-  default     = "terraform-WebAppServer-instance"
-}
-
 output "public_ip" {
   value       = aws_instance.app_server.public_ip
   description = "The public IP of the WebAppServer Instance"
