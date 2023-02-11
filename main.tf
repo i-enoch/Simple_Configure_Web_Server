@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami                    = "ami-0afd55c0c8a52973a"
+  ami                    = "ami-0afd55c0c8a52973a" #Ubuntu 22.04 LIS // eu-west-3c
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
 
